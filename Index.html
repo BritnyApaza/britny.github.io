@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitta Connect</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fuente de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="encabezado">
+        <h1>VITTA CONNECT</h1>
+        <p class="subtitulo">"Tu compañero en el camino hacia tu vida ideal"</p>
+        <a href="#" class="logo">
+        </a>
+        <nav>
+            <a href="" class="nav-link">Inicio</a>
+            <a href="" class="nav-link">Sobre Nosotros</a>
+            <a href="" class="nav-link">Contactos y consultas</a>
+        </nav>
+    </header>
+
+    <!-- Sección Quiénes Somos -->
+    <section class="quienes-somos">
+        <h2>¿Quiénes Somos?</h2>
+        <p>
+            Vitta Connect es una aplicación innovadora de nutrición diseñada para guiarte hacia una vida más saludable.
+            Con herramientas personalizadas, planes a medida y consejos de expertos, te ayudamos a lograr tu bienestar y sobre todo a ser TU MEJOR VERSIÓN
+        </p>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section class="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="servicio-grid">
+            <div class="servicio-item">
+                <img src="alimentacion.webp" alt="Plan de Alimentación">
+                <h3>Plan de Alimentación</h3>
+                <p>Planes personalizados de alimentación saludable adaptados a ti.</p>
+            </div>
+            <div class="servicio-item">
+                <img src="ejercicio.webp" alt="Plan de Ejercicios">
+                <h3>Plan de Ejercicios</h3>
+                <p>Rutinas de ejercicios diseñadas para tu nivel y objetivos.</p>
+            </div>
+            <div class="servicio-item">
+                <img src="recetas.webp" alt="Recetas Saludables">
+                <h3>Recetas Saludables</h3>
+                <p>Deliciosas recetas nutritivas para tu día a día.</p>
+            </div>
+            <div class="servicio-item">
+                <img src="consultas.webp" alt="Consultas">
+                <h3>Consultas Personalizadas</h3>
+                <p>Consulta con nuestros expertos en nutrición.</p>
+            </div>
+            <div class="servicio-item">
+                <img src="conferencia.jpg" alt="NutriTutoriales">
+                <h4>NutriTutoriales</h4>
+                <p>Todos los videos y conferencias relacionados con tu salud.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Objetivos -->
+    <section class="objetivos">
+        <h2>Nuestros Objetivos</h2>
+        <p>
+            Promover la salud y el bienestar de nuestros usuarios a través de información personalizada
+            y hábitos saludables adaptados a sus necesidades.
+        </p>
+    </section>
+
+    <!-- Sección Testimonios -->
+    <section class="testimonios">
+        <h2>Testimonios</h2>
+        <div class="testimonio-item">
+            <p><strong>Delia:</strong> "La app es excelente para planificar mis comidas y asegurarme de obtener los nutrientes necesarios."</p>
+        </div>
+        <div class="testimonio-item">
+            <p><strong>Javier:</strong> "Gracias a Vitta Connect, logré mejorar mi condición física con rutinas personalizadas."</p>
+        </div>
+    </section>
+
+    <!-- Sección Reacciones -->
+    <section class="reacciones">
+        <h2>¿Cuál es tu reacción?</h2>
+        <div class="reaction-container">
+            <div class="reaction" onclick="incrementReaction('like')">
+                👍
+                <div class="counter" id="like">0</div>
+            </div>
+            <div class="reaction" onclick="incrementReaction('dislike')">
+                👎
+                <div class="counter" id="dislike">0</div>
+            </div>
+            <div class="reaction" onclick="incrementReaction('love')">
+                ❤️
+                <div class="counter" id="love">0</div>
+            </div>
+            <div class="reaction" onclick="incrementReaction('poop')">
+                💩
+                <div class="counter" id="poop">0</div>
+            </div>
+        </div>
+        <script>
+            const reactions = {
+                like: 0,
+                dislike: 0,
+                love: 0,
+                poop: 0
+            };
+
+            function incrementReaction(reaction) {
+                if (reactions[reaction] !== undefined) {
+                    reactions[reaction]++;
+                    document.getElementById(reaction).textContent = reactions[reaction];
+                }
+            }
+        </script>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Vitta Connect. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html> 
